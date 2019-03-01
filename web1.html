@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ordering Page</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="css/main.css" />
+
+<style>
+body {padding: 0;margin: 0;}
+ul,li,p,em,h1,h2,h3,h4,h5,h6 {list-style: none;margin: 0;padding: 0;}
+a {cursor: pointer;text-decoration: none;outline: none;hidefocus;}
+img {border: 0;}
+form,input,img,{margin:0;padding:0}
+html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+img{border:0;vertical-align:middle}
+.box3{width:830px; height:600px; margin:0 auto;border:1px solid #ccc;}
+.box3_l{width:575px; height:600px; float:left; border-right:1px solid #ccc;}
+.box3_l_t{width:575px; height:80px; float:left;}
+.box3_l_t h1{width:575px; height:30px; float:left; line-height:30px; text-indent:10px; font-size:20px;}
+.box3_l_t ul{width:575px; height:25px; float:left; border-bottom:1px solid #ccc; margin-top:15px;}
+.box3_l_t ul li{width:191px; height:25px; float:left; line-height:25px; text-align:center; border:1px solid #ccc; border-bottom:none; border-left:none; display:block; cursor:pointer;}
+.box3_l_t_ul_li{background-color:#999; color:#FFF;}
+.box3_l_t_li{width:536px; height:480px; float:left; margin:20px; display:none;}
+.box3_l_t_li a{width:94px; height:142px; float:left; margin-left:20px; margin-bottom:20px;}
+.box3_l_t_li a img{width:94px; height:82px; float:left;}
+.box3_l_t_li a p{width:94px; height:20px; float:left; line-height:20px; font-size:12px;}
+.box3_l_t_li a span{width:45px; height:20px; float:left; line-height:20px; font-size:12px;}
+.box3_l_t_li a h1{width:35px; height:17px; float:left;padding-right:5px; padding-top:2px;}
+.box3_r{width:253px; height:600px; float:left;}
+.box3_r_t{width:253px; height:70px; float:left; border-bottom:1px solid #ccc; line-height:70px; text-align:center;}
+.box3_r_b{width:253px; height:30px; float:left; border-top:1px solid #ccc; line-height:30px; text-align:center;}
+.box3_r_c{width:253px; height:480px; float:left; padding-top:10px; padding-bottom:10px;}
+.box3_r_c h1{width:253px; height:30px; float:left; font-size:16px; line-height:30px; text-indent:5px;}
+.box3_r_c_c ul{width:253px; height:auto; float:left;}
+.box3_r_c_c ul li{width:253px; height:25px; float:left; line-height:25px; text-indent:15px; border-bottom:1px dashed #ccc;"}
+</style>
+</head>
+
+<body>
+<img src="images/resT1.png" style="margin:0 auto; width:832px; height:201px; display:block;" />
+<h1 style="width:832px; height:50px; margin:0 auto; line-height:50px;">Ordering Page</h1>
+<div class="box3">
+ 	<div class="box3_l">
+    	<div class="box3_l_t">
+            <h1><input type="text" value="1" style="width:20px; height:20px" /> Table</h1>
+            <ul id="tab">
+                <li class="box3_l_t_ul_li">Entrees</li>
+                <li>Snack</li>
+                <li style="border-right:none;">Beverage</li>
+            </ul>
+            <div class="box3_l_t_li" id="show0" style="display:block;">
+            	<a style="margin-left:0px;">
+                	<img src="images/101.jpg" id="ClickMe" style="border:1px dashed #ccc;" />
+                    <p>Burger</p>
+                    <span>$10.99</span>
+                    <h1><img src="images/12.jpg" style="width:15px; height:15px;" /></h1>
+                </a>
+                <a>
+                	<img src="images/102.jpg" id="ClickMe" style="border:1px dashed #ccc;" />
+                    <p>Sandwitch </p>
+                    <span>$9.99</span>
+                    <h1><img src="images/12.jpg" style="width:15px; height:15px;" /></h1>
+                </a>
+
+            </div>
+            <div class="box3_l_t_li" id="show1">
+            	<a style="margin-left:0px;">
+                	<img src="images/001.jpg" id="ClickMe" style="border:1px dashed #ccc;" />
+                    <p>Salad</p>
+                    <span>$6.99</span>
+                    <h1><img src="images/12.jpg" style="width:15px; height:15px;" /></h1>
+                </a>
+                <a>
+                	<img src="images/002.jpg" id="ClickMe" style="border:1px dashed #ccc;" />
+                    <p>Soup</p>
+                    <span>$5.99</span>
+                    <h1><img src="images/12.jpg" style="width:15px; height:15px;" /></h1>
+                </a>
+
+            </div>
+            <div class="box3_l_t_li" id="show2">
+            	<a style="margin-left:0px;">
+                	<img src="images/301.jpg" id="ClickMe" style="border:1px dashed #ccc;" />
+                    <p>coke</p>
+                    <span>$1.99</span>
+                   <h1><img src="images/12.jpg" style="width:15px; height:15px;" /></h1>
+                </a>
+                <a>
+                	<img src="images/302.jpg" id="ClickMe" style="border:1px dashed #ccc;" />
+                    <p>Beer</p>
+                    <span>$2.99</span>
+                    <h1><img src="images/12.jpg" style="width:15px; height:15px;" /></h1>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    
+ <script type="text/javascript">
+$(document).ready(function(){
+	var $tab_li = $('#tab li');
+	$tab_li.click(function(){
+		$(this).addClass('box3_l_t_ul_li').siblings().removeClass('box3_l_t_ul_li');
+		var index = $tab_li.index(this);
+		$(".box3_l_t_li").hide();
+		$("#show"+index).show();
+	});	
+});
+$(".box3_l_t_li a").find("h1").click(
+	function(){
+		var fuji = $(this).parent();
+		var caiming = $(fuji).find("p").html();
+		var jiage = $(fuji).find("span").html();
+		var gwid = $(".box3_r_c_c").length;
+		$("#uli_sh"+gwid).append('<li><p style="float:left;">'+caiming+'</p>&nbsp;&nbsp;<span style="float:left;">'+jiage+'</span>&nbsp;&nbsp;<a style="float:right; margin-right:1px;" onclick="shanchu(this);"><img src="images/13.jpg" style="width:15px; height:15px; margin-top:5px;" /></a></li>');
+		var n=parseFloat(jiage.substr(1,5));
+		var zj = parseFloat($("#xzj").html());
+		var numss = n+zj;
+		var xnumss = numss*1.13;
+		$("#zj").html(xnumss.toFixed(4));
+		$("#xzj").html(numss.toFixed(2));
+		$(".box3_r_c_c").show();
+		$("#l1").show();		
+	}
+);
+function showry(id){
+	var gwid = $(".box3_r_c_c").length;
+	var gwid = $(".box3_r_c_c").length +1;
+	var htmlgw = '<div class="box3_r_c_c" id="showgw'+gwid+'"><h1 style="text-indent:5px; font-weight:bold; border-bottom:1px solid #ccc;">Customer '+gwid+'</h1><ul id="uli_sh'+gwid+'"></ul></div>';
+	$(".showgwc").append(htmlgw);
+}
+
+function qingkong(obj){
+	 $('.box3_r_c_c').remove();	
+	 $('#zj').html(0);
+	 $('#xzj').html(0);
+}
+function shanchu(obj){
+	 $(obj).parent().remove();	
+	 var scj = $(obj).prev().html();	
+	 var zjsc = $("#xzj").html();
+	 var jj= parseFloat(scj.substr(1,5));
+	 
+	 var xzj = zjsc-jj;
+	 var xzj2 = zjsc-(jj*1.13);
+	 $("#zj").html(xzj.toFixed(4));
+	 $("#xzj").html(xzj2.toFixed(2));
+}
+
+</script>
+    <div class="box3_r">
+    	<div class="box3_r_t" style="cursor:pointer;">Language</div>
+        <div class="box3_r_c">
+        	<h1>Ordered List:</h1>
+             <div class="box3_r_c_c" style="display:none;" id="showgw1">
+                <h1 style="text-indent:5px; font-weight:bold; border-bottom:1px solid #ccc;">Customer 1:</h1>
+                <ul id="uli_sh1">
+                </ul>
+            </div>
+            <div class="showgwc">
+           
+            </div>
+            <h2 style="width:60px; height:25px; float:right; display:none; border:1px solid #ccc; border-top:none; text-align:center; line-height:25px; cursor:pointer;" onclick="showry(1)" id="l1">Next</h2>
+            <h1>Subtotal:<span id="xzj">0</span></h1>
+            <h1>Total(with tax):<span id="zj">0</span></h1>
+        </div>
+        <div class="box3_r_b"><a onclick="qingkong(this);">Confirm</a></div>
+    </div>  
+</div>
+<div id="code">
+  <div class="close1"><a href="javascript:void(0)" id="closebt"><img src="images/close.gif"></a></div>
+  <div class="code-img"> <img id="ewmsrc"  src="images/002.jpg" style="width:247px; height:152px;" /></div>
+  <div class="goodtxt">
+    <p id="cm"></p>
+    <p id="jiage"></p>
+    <p id="jiage">Made of: something here</p>
+  </div>
+</div>
+<style>
+#show{width:200px; height:80px; padding: 10px;
+	position: absolute;
+	left: 45%;
+	z-index: 1002; 
+	background-color:#E6E6E6;
+	display: none;
+	}
+#show h1{width:200px; height:40px; float:left; line-height:40px; text-align:center; font-size:18px;}
+#show ul{width:200px; height:40px; float:left;}
+#show ul li{width:60px; height:30px; float:left; background-color:#fff; margin-left:25px; line-height:30px; font-size:12px; text-align:center;}
+</style>
+<div id="show">
+	<h1>Language</h1>
+    <ul>
+    	<li><a href="">中文</a></li>
+        <li><a href="">English</a></li>
+    </ul>
+</div>
+
+<script>
+$(".box3_r_t").click(
+	function(){
+		$('#show').show();	
+		$('#show').center();
+	}
+);
+
+jQuery.fn.center = function(loaded) {
+        var obj = this;
+        body_width = parseInt($(window).width());
+        body_height = parseInt($(window).height());
+        block_width = parseInt(obj.width());
+        block_height = parseInt(obj.height());
+
+        left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
+        if (body_width < block_width) {
+            left_position = 0 + $(window).scrollLeft();
+        };
+
+        top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+        if (body_height < block_height) {
+            top_position = 0 + $(window).scrollTop();
+        };
+
+        if (!loaded) {
+
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.css({
+                'top': ($(window).height() - $('#show').height()) * 0.5,
+                'left': left_position
+            });
+            $(window).bind('resize', function() {
+                obj.center(!loaded);
+            });
+            $(window).bind('scroll', function() {
+                obj.center(!loaded);
+            });
+
+        } else {
+            obj.stop();
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.animate({
+                'top': top_position
+            }, 200, 'linear');
+        }
+    }
+
+$(function() {
+    //alert($(window).height());
+    $('.box3_l_t_li #ClickMe').click(function() {
+        $('#code').center();
+        $('#goodcover').show();
+        $('#code').fadeIn();
+		var fuji = $(this).parent();
+		$("#ewmsrc").attr("src",$(this).attr("src"));
+		$("#cm").html(fuji.find("p").html());
+		$("#jiage").html(fuji.find("span").html());
+		
+    });
+    $('#closebt').click(function() {
+        $('#code').hide();
+        $('#goodcover').hide();
+    });
+	$('#goodcover').click(function() {
+        $('#code').hide();
+        $('#goodcover').hide();
+    });
+    jQuery.fn.center = function(loaded) {
+        var obj = this;
+        body_width = parseInt($(window).width());
+        body_height = parseInt($(window).height());
+        block_width = parseInt(obj.width());
+        block_height = parseInt(obj.height());
+
+        left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
+        if (body_width < block_width) {
+            left_position = 0 + $(window).scrollLeft();
+        };
+
+        top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+        if (body_height < block_height) {
+            top_position = 0 + $(window).scrollTop();
+        };
+
+        if (!loaded) {
+
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.css({
+                'top': ($(window).height() - $('#code').height()) * 0.5,
+                'left': left_position
+            });
+            $(window).bind('resize', function() {
+                obj.center(!loaded);
+            });
+            $(window).bind('scroll', function() {
+                obj.center(!loaded);
+            });
+
+        } else {
+            obj.stop();
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.animate({
+                'top': top_position
+            }, 200, 'linear');
+        }
+    }
+
+})
+</script>
+
+
+
+</body>
+</html>

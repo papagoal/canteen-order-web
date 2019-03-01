@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Front Desk Page</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style>
+body {padding: 0;margin: 0;}
+ul,li,p,em,h1,h2,h3,h4,h5,h6 {list-style: none;margin: 0;padding: 0;}
+a {cursor: pointer;text-decoration: none;outline: none;hidefocus;}
+img {border: 0;}
+form,input,img,{margin:0;padding:0}
+html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+img{border:0;vertical-align:middle}
+.box2{width:795px; height:360px; margin:0 auto; border:1px solid #ccc; padding:20px;}
+.box2 li{width:60px; height:60px; float:left; margin-left:20px; border:1px solid #ccc; text-align:center; line-height:60px; cursor:pointer; font-size:19px;}
+.show_box{width:200px; height:240px; position:absolute; border:1px solid #ccc; padding:30px; display:none;left: 45%;z-index: 1002; background-color:#EBEBEB;}
+.show_box h1{width:200px; height:40px; float:left; font-size:18px;}
+.show_box h2{width:200px; height:40px; float:left; font-size:18px;}
+.show_box p{width:180px; height:auto; float:left; margin-left:20px; line-height:30px;}
+.show_box a{width:auto; padding-left:5px; padding-right:5px; height:30px; float:left; line-height:30px; text-align:center; border:1px solid #ccc; margin-top:50px;} 
+</style>
+</head>
+
+<body>
+<img src="images/resT1.png" style="margin:0 auto; width:832px; height:201px; display:block;" />
+<h1 style="width:832px; height:50px; margin:0 auto; line-height:50px;">Front Desk Page</h1>
+<h1 style="width:835px; height:50px; margin:0 auto; line-height:50px; font-size:18px; border:1px solid #ccc; border-bottom:none; text-indent:5px;">Table Number</h1>
+<div class="box2">
+    <ul>
+        <li style="margin-left:0px;" onclick="showcd(1);">1</li>
+        <li onclick="showcd(2);">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+</div>
+<div class="show_box" id="show_box1">
+	<h1>1 Table Number</h1>	
+    <h2>List：</h2>
+    <p>Burger、Coke、Salad</p>
+    <a id="dayin1" onclick="showdy(1);" style="width:auto;">Print Bill</a>
+</div>
+<div class="show_box" id="show_box2">
+	<h1>2 Table Number</h1>	
+    <h2>List：</h2>
+    <p>Customer1、Customer2</p>
+    <a id="dayin2" onclick="showdy(2);" style="width:auto;">Print Bill</a>
+</div>
+<script>
+function showcd(bid){
+	$("#show_box"+bid).show();
+	$('#show_box'+bid).center();
+}
+function showdy(bid){
+	var gnl=confirm("Split bill or not？");
+	$('#show_box'+bid).hide();
+}
+jQuery.fn.center = function(loaded) {
+        var obj = this;
+        body_width = parseInt($(window).width());
+        body_height = parseInt($(window).height());
+        block_width = parseInt(obj.width());
+        block_height = parseInt(obj.height());
+
+        left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
+        if (body_width < block_width) {
+            left_position = 0 + $(window).scrollLeft();
+        };
+
+        top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+        if (body_height < block_height) {
+            top_position = 0 + $(window).scrollTop();
+        };
+
+        if (!loaded) {
+
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.css({
+                'top': ($(window).height() - $('.show_box').height()) * 0.5,
+                'left': left_position
+            });
+            $(window).bind('resize', function() {
+                obj.center(!loaded);
+            });
+            $(window).bind('scroll', function() {
+                obj.center(!loaded);
+            });
+
+        } else {
+            obj.stop();
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.animate({
+                'top': top_position
+            }, 200, 'linear');
+        }
+    }
+
+</script>
+</body>
+</html>

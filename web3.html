@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Manager Page</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style>
+body {padding: 0;margin: 0;}
+ul,li,p,em,h1,h2,h3,h4,h5,h6 {list-style: none;margin: 0;padding: 0;}
+a {cursor: pointer;text-decoration: none;outline: none;hidefocus;}
+img {border: 0;}
+form,input,img,{margin:0;padding:0}
+html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+img{border:0;vertical-align:middle}
+.box1{width:830px; height:400px; margin:0 auto; border:1px solid #ccc;}
+.box1_l{width:830px; height:60px; float:left; border-bottom:1px solid #ccc;}
+.box1_l span{width:60px; height:60px; float:left; line-height:60px; text-align:center; font-size:20px; border-right:1px solid #ccc;}
+.box1_l h1{width:60px; height:60px; float:left; line-height:60px; text-align:center; font-size:20px; border-left:1px solid #ccc; font-size:16px; cursor:pointer;}
+.box1_l ul{width:630px; height:20px; float:left; padding:20px;}
+.box1_l ul li{width:auto; height:20px; float:left; padding-left:5px; padding-right:5px; border:1px dashed #ccc; text-align:center; line-height:20px; margin-right:20px; cursor:pointer;}
+.box1_l ul li:hover{background-color:#666; color:#FFF;}
+.box1_lullihover{background-color:#666; color:#FFF;}
+.box1_2{width:830px; height:60px; float:left; border-bottom:1px solid #ccc;}
+.box1_2 span{width:60px; height:60px; float:left; line-height:60px; text-align:center; font-size:20px; border-right:1px solid #ccc;}
+.box1_2 ul{width:630px; height:20px; float:left; padding:20px;}
+</style>
+</head>
+
+<body>
+<img src="images/resT1.png" style="margin:0 auto; width:832px; height:201px; display:block;" />
+<h1 style="width:832px; height:50px; margin:0 auto; line-height:50px;">Manager Page</h1>
+<div class="box1">
+	<div class="box1_2">
+    	<span>Table</span>
+        <ul>Orderd List</ul>
+        <span style="border-left:1px solid #ccc; border-right:none;">Operate</span>
+    </div>
+	<div class="box1_l">
+    	<span>
+        	<a>1</a>
+            <a href="web1.html" style="border:1px dashed #ccc;"><img src="images/12.jpg" style="width:15px; height:15px; margin-top:5px;" /></a>
+        </span>
+        <ul>
+        	<li>Burger</li>
+            <li>Salad</li>
+            <li>Beer</li>
+        </ul>
+        <h1>Done</h1>
+    </div>
+    <div class="box1_l">
+    	<span>
+        	<a>2</a>
+            <a href="web1.html" style="border:1px dashed #ccc;"><img src="images/12.jpg" style="width:15px; height:15px; margin-top:5px;" /></a>
+        </span>
+        <ul>
+        	<li>Burger</li>
+            <li>Sandwitch</li>
+            <li>Beer</li>
+            <li>Coke</li>
+            <li>Salad</li>
+        </ul>
+        <h1>Done</h1>
+    </div>
+    <div class="box1_l">
+    	<span>
+        	<a>3</a>
+            <a href="web1.html" style="border:1px dashed #ccc;"><img src="images/12.jpg" style="width:15px; height:15px; margin-top:5px;" /></a>
+        </span>
+        <ul>
+        	<li>Burger</li>
+            <li>Sandwitch</li>
+            <li>Beer *2</li>
+            <li>Soup</li>
+        </ul>
+        <h1>Done</h1>
+    </div>
+</div>
+<script>
+$(".box1_l li").click(
+	function(){
+		if($(this).hasClass("box1_lullihover")){
+			var gnl=confirm("Add back to list?");
+			if (gnl==true){
+				$(this).removeClass("box1_lullihover"); 
+			}else{
+				return false;
+			}
+		}else{
+			$(this).addClass("box1_lullihover"); 
+		}
+	}
+);
+$(".box1_l h1").click(
+	function(){
+		$(this).parent().remove();	
+	}
+);
+</script>
+</body>
+</html>
