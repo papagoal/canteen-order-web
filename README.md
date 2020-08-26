@@ -4,9 +4,9 @@ Three Simple  indicidual HTML pages to simulate different functionality for cant
 
 ## About
 
-Ordering Page: 
-Front Desk Page:
-Manager Page:
+1. Ordering Page: 
+2. Front Desk Page:
+3. Manager Page:
 
 
 ## Getting Started
