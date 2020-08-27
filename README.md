@@ -22,4 +22,4 @@ Three Simple  indicidual HTML pages to simulate different functionality for cant
 Simply open html files
 
 ## License
-[MIT]
+[MIT License](LICENSE)
